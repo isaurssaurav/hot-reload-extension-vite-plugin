@@ -1,6 +1,6 @@
 {
   "name": "hot-reload-extension-vite",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "description": "Simple vite plugin to reload the chrome extension.",
   "main": "dist/main.js",
   "files": [
@@ -15,7 +15,9 @@
   },
   "scripts": {
     "build": "tsup",
-    "lint:fix": "prettier . --write"
+    "lint:check": "prettier . --check",
+    "lint:fix": "prettier . --write",
+    "semantic-release": "semantic-release --branches main"
   },
   "keywords": [
     "vite"
@@ -32,9 +34,14 @@
     "prettier": "^3.0.3",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2",
-    "vite": "^4.4.9"
+    "vite": "^4.4.9",
+    "semantic-release": "^22.0.4"
   },
   "dependencies": {
     "ws": "^8.14.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/isaurssaurav/hot-reload-extension-vite.git"
   }
 }
