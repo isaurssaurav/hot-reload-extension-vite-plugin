@@ -4,7 +4,7 @@
 
 Inspired by [stackoverflow answer](https://stackoverflow.com/a/65485938/7135342) and other similar repos.
 
-![demo](https://raw.githubusercontent.com/isaurssaurav/hot-reload-extension-vite/image.png)
+![image](https://raw.githubusercontent.com/isaurssaurav/hot-reload-extension-vite/main/image.png)
 
 ## Usage
 
