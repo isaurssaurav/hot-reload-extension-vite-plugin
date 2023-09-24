@@ -1,8 +1,8 @@
 # Hot Reload Chrome Extension - Vite Plugin
 
-> This vite plugin provides simple solution to reload the chrome extension which runs on manifest v3.
+> This Vite plugin offers an effortless solution for seamlessly refreshing a Chrome extension built on Manifest V3. With this plugin, you can streamline the development and testing process, ensuring your extension stays up-to-date without manual intervention.
 
-Inspired from [stackoverflow answer](https://stackoverflow.com/a/65485938/7135342) and other repo.
+Inspired by [stackoverflow answer](https://stackoverflow.com/a/65485938/7135342) and other similar repo.
 
 ![demo](https://raw.githubusercontent.com/isaurssaurav/hot-reload-extension-vite/main/demo/index.png)
 
@@ -17,11 +17,11 @@ $ npm i hot-reload-extension-vite -D
 ### configuration
 
 ```js
-import hotReloadExtensionVite from 'hot-reload-extension-vite';
+import hotReloadExtension from 'hot-reload-extension-vite';
 
 export default {
   plugins: [
-    hotReloadExtensionVite({
+    hotReloadExtension({
       log: true,
       contentPath: 'path/to/content-script', // src/pages/content/index.ts
       backgroundPath: 'path/to/background' // src/pages/background/index.ts
