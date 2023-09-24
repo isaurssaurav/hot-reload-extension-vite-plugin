@@ -7,4 +7,4 @@ $ npm i
 $ npm run dev
 ```
 
-> Load the dist folder chrome browser
+> Load the dist folder on chrome browser
