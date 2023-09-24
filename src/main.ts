@@ -55,9 +55,7 @@ const hotReloadExtensionVite = (
     },
     closeBundle() {
       if (isDev && !ws)
-        chalkLogger.red(
-          'Import content-reload and open tab with content script loaded.'
-        );
+        chalkLogger.red('Open tab with content script to start reloading...');
       if (isDev && ws) {
         if (log) chalkLogger.green('Extension Reloaded...');
         ws.send(Message.FILE_CHANGE);
