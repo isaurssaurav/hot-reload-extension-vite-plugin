@@ -44,3 +44,7 @@ jobs:
     - run: npm run lint:fix
     - run: npm run build --if-present
     - run: npm run semantic-release
+      env:
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
