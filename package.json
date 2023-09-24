@@ -1,6 +1,6 @@
 {
   "name": "hot-reload-extension-vite",
-  "version": "0.0.5",
+  "version": "0.0.0-development",
   "description": "Simple vite plugin to reload the chrome extension.",
   "main": "dist/main.js",
   "files": [
