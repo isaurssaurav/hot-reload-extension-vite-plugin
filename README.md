@@ -30,7 +30,7 @@ export default {
 
 | Options        | Type               | Description                             |
 | -------------- | ------------------ | --------------------------------------- |
-| log            | boolean (optional) | Logs error and info.                     |
+| log            | boolean (optional) | Logs error and info.                    |
 | contentPath    | string (required)  | Path to content script file.            |
 | backgroundPath | string(required)   | Path to background service worker file. |
 
