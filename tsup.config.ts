@@ -1,0 +1,15 @@
+import { defineConfig } from 'tsup';
+
+export default defineConfig({
+  entry: [
+    'src/main.ts',
+    'src/scripts/content-reload.ts',
+    'src/scripts/background-reload.ts'
+  ],
+  dts: true,
+  splitting: false,
+  sourcemap: false,
+  clean: true,
+  shims: true,
+  format: ['cjs', 'esm']
+});
