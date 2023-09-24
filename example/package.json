@@ -1,0 +1,21 @@
+{
+  "name": "vvextension-starter-pack",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "NODE_ENV=development vite build --watch",
+    "build": "vue-tsc && vite build"
+  },
+  "dependencies": {
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.246",
+    "@types/node": "^20.6.4",
+    "hot-reload-extension-vite": "^1.0.4",
+    "vite": "^4.4.5",
+    "vite-plugin-static-copy": "^0.17.0",
+    "vue-tsc": "^1.8.13"
+  }
+}

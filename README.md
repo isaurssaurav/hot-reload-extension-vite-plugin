@@ -2,9 +2,9 @@
 
 > This Vite plugin offers an effortless solution for seamlessly refreshing a Chrome extension built on Manifest V3. With this plugin, you can streamline the development and testing process, ensuring your extension stays up-to-date without manual intervention.
 
-Inspired by [stackoverflow answer](https://stackoverflow.com/a/65485938/7135342) and other similar repo.
+Inspired by [stackoverflow answer](https://stackoverflow.com/a/65485938/7135342) and other similar repos.
 
-![demo](https://raw.githubusercontent.com/isaurssaurav/hot-reload-extension-vite/main/demo/demo.png)
+![demo](https://raw.githubusercontent.com/isaurssaurav/hot-reload-extension-vite/image.png)
 
 ## Usage
 
@@ -32,21 +32,23 @@ export default {
 Then run
 
 ```bash
-$ NODE_ENV=development vite build --watch
+$ NODE_ENV=development vite build --watch  // Override NODE_ENV
 ```
 
 > Extension will only reload when NODE_ENV is 'development'
-
-## Running example
-
-In progress
 
 ## Options
 
 | Options        | Type               | Description                             |
 | -------------- | ------------------ | --------------------------------------- |
 | log            | boolean (optional) | Logs error and info.                    |
-| backgroundPath | string(required)   | Path to background service worker file. |
+| backgroundPath | string (required)  | Path to background service worker file. |
+
+## Env variables
+
+| Variable                       | default | Description     |
+| ------------------------------ | ------- | --------------- |
+| HOT_RELOAD_EXTENSION_VITE_PORT | 8080    | Web socket port |
 
 ## License
 
