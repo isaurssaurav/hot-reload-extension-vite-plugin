@@ -16,6 +16,7 @@
     "hot-reload-extension-vite": "^1.0.4",
     "vite": "^4.4.5",
     "vite-plugin-static-copy": "^0.17.0",
-    "vue-tsc": "^1.8.13"
+    "vue-tsc": "^1.8.13",
+    "@vitejs/plugin-vue": "^4.3.4"
   }
 }
