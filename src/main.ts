@@ -10,7 +10,6 @@ import {
 } from './utils';
 
 export type hotReloadExtensionViteOptions = {
-  contentPath: string;
   backgroundPath: string;
   log?: boolean;
 };
@@ -18,7 +17,7 @@ export type hotReloadExtensionViteOptions = {
 const hotReloadExtensionVite = (
   options: hotReloadExtensionViteOptions
 ): Plugin => {
-  const { log, contentPath, backgroundPath } = options;
+  const { log, backgroundPath } = options;
 
   let ws: WebSocket | null = null;
 
@@ -35,15 +34,6 @@ const hotReloadExtensionVite = (
   return {
     name: 'hot-reload-extension-vite',
     async transform(code: string, id: string) {
-      if (isDev && id.includes(contentPath)) {
-        const buffer = fs.readFileSync(
-          resolve(__dirname, 'scripts/content-reload.js')
-        );
-        return {
-          code: code + buffer.toString()
-        };
-      }
-
       if (id.includes(backgroundPath)) {
         const buffer = fs.readFileSync(
           resolve(__dirname, 'scripts/background-reload.js')
@@ -54,8 +44,7 @@ const hotReloadExtensionVite = (
       }
     },
     closeBundle() {
-      if (isDev && !ws)
-        chalkLogger.red('Open tab with content script to start reloading...');
+      if (isDev && !ws) chalkLogger.red('Load extension to browser...');
       if (isDev && ws) {
         if (log) chalkLogger.green('Extension Reloaded...');
         ws.send(Message.FILE_CHANGE);

@@ -23,7 +23,6 @@ export default {
   plugins: [
     hotReloadExtension({
       log: true,
-      contentPath: 'path/to/content-script', // src/pages/content/index.ts
       backgroundPath: 'path/to/background' // src/pages/background/index.ts
     })
   ]
@@ -47,7 +46,6 @@ In progress
 | Options        | Type               | Description                             |
 | -------------- | ------------------ | --------------------------------------- |
 | log            | boolean (optional) | Logs error and info.                    |
-| contentPath    | string (required)  | Path to content script file.            |
 | backgroundPath | string(required)   | Path to background service worker file. |
 
 ## License

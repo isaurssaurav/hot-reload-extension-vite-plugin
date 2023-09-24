@@ -1,10 +1,14 @@
-import { Message } from '../utils';
+import { HOT_RELOAD_EXTENSION_VITE_PORT, Message, isDev } from '../utils';
 
-chrome.runtime.onMessage.addListener((message) => {
-  if (message === Message.RELOAD_EXTENSION) {
-    chrome.runtime.reload();
-    chrome.tabs.query({ active: true }).then(() => {
+if (isDev) {
+  const socket = new WebSocket(
+    `ws://localhost:${HOT_RELOAD_EXTENSION_VITE_PORT}`
+  );
+
+  socket.addEventListener('message', (event) => {
+    if (event.data === Message.FILE_CHANGE) {
+      chrome.runtime.reload();
       chrome.tabs.reload();
-    });
-  }
-});
+    }
+  });
+}
