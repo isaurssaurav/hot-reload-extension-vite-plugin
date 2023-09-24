@@ -17,7 +17,7 @@
     "build": "tsup",
     "lint:check": "prettier . --check",
     "lint:fix": "prettier . --write",
-    "semantic-release": "semantic-release --branches main"
+    "semantic-release": "semantic-release"
   },
   "keywords": [
     "vite"
@@ -36,6 +36,9 @@
     "typescript": "^5.2.2",
     "vite": "^4.4.9",
     "semantic-release": "^22.0.4"
+  },
+  "release": {
+    "branches": ["main"]
   },
   "dependencies": {
     "ws": "^8.14.2"
