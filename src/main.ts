@@ -1,56 +1,57 @@
 import type { Plugin } from 'vite';
 import { resolve } from 'path';
+import WebSocket from 'ws';
 import fs from 'fs';
-import WebSocket, { WebSocketServer } from 'ws';
-import {
-  HOT_RELOAD_EXTENSION_VITE_PORT,
-  Message,
-  chalkLogger,
-  isDev
-} from './utils';
+import { initAndListenConnection } from './utils/websocket';
+import { Message, PLUGIN_NAME, chalkLogger, isDev } from './utils';
 
-export type hotReloadExtensionViteOptions = {
+export type hotReloadExtensionOptions = {
   backgroundPath: string;
   log?: boolean;
 };
 
-const hotReloadExtensionVite = (
-  options: hotReloadExtensionViteOptions
-): Plugin => {
+const hotReloadExtension = (options: hotReloadExtensionOptions): Plugin => {
   const { log, backgroundPath } = options;
-
   let ws: WebSocket | null = null;
 
   if (isDev) {
-    const wss = new WebSocketServer({ port: HOT_RELOAD_EXTENSION_VITE_PORT });
-    wss.on('connection', function connection(w) {
-      if (log) chalkLogger.green('Client connected! Ready to reload...');
-
-      w.on('error', console.error);
-      ws = w;
+    initAndListenConnection((websocket) => {
+      ws = websocket;
+      if (log) {
+        chalkLogger.green('Client connected! Ready to reload...');
+      }
     });
   }
 
   return {
-    name: 'hot-reload-extension-vite',
+    name: PLUGIN_NAME,
     async transform(code: string, id: string) {
+      if (!isDev) {
+        return;
+      }
+
       if (id.includes(backgroundPath)) {
-        const buffer = fs.readFileSync(
-          resolve(__dirname, 'scripts/background-reload.js')
-        );
+        const buffer = fs.readFileSync(resolve(__dirname, 'scripts/background-reload.js'));
+
         return {
           code: code + buffer.toString()
         };
       }
     },
     closeBundle() {
-      if (isDev && !ws) chalkLogger.red('Load extension to browser...');
-      if (isDev && ws) {
-        if (log) chalkLogger.green('Extension Reloaded...');
-        ws.send(Message.FILE_CHANGE);
+      if (!isDev) {
+        return;
       }
+
+      if (!ws) {
+        chalkLogger.red('Load extension to browser...');
+        return;
+      }
+
+      if (log) chalkLogger.green('Extension Reloaded...');
+      ws?.send(Message.FILE_CHANGE);
     }
   };
 };
 
-export default hotReloadExtensionVite;
+export default hotReloadExtension;
