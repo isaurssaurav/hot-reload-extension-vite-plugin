@@ -1,3 +1,4 @@
+[![Node.js CI](https://github.com/isaurssaurav/hot-reload-extension-vite/actions/workflows/node.js.yml/badge.svg?branch=main)](https://github.com/isaurssaurav/hot-reload-extension-vite/actions/workflows/node.js.yml)
 # Hot Reload Chrome Extension - Vite Plugin
 
 ![image](https://raw.githubusercontent.com/isaurssaurav/hot-reload-extension-vite/main/hot-reload-extension-vite.png)
