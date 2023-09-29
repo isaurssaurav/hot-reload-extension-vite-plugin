@@ -1,4 +1,6 @@
-# Demo
+# Example
+
+This is a example project which shows how to use `hot-reload-extension-vite` package.
 
 ## Usage
 

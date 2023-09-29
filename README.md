@@ -37,6 +37,10 @@ $ NODE_ENV=development vite build --watch  // Override NODE_ENV
 
 > Extension will only reload when NODE_ENV is 'development'
 
+## Example Project
+
+[Link](https://github.com/isaurssaurav/hot-reload-extension-vite/tree/main/example)
+
 ## Options
 
 | Options        | Type               | Description                             |
