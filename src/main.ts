@@ -11,7 +11,6 @@ export type hotReloadExtensionOptions = {
 };
 
 let IS_TRANSFORMED = false;
-let IS_BUFFERING = false;
 
 const hotReloadExtension = (options: hotReloadExtensionOptions): Plugin => {
   const { log, backgroundPath } = options;
@@ -52,20 +51,11 @@ const hotReloadExtension = (options: hotReloadExtensionOptions): Plugin => {
         return;
       }
 
-      await new Promise((res) => {
-        setTimeout(() => {
-          IS_BUFFERING = true;
-          res(1);
-        }, 500);
-      });
-
-      IS_BUFFERING = false;
-
-      if (!IS_BUFFERING) {
+      // buffer time
+      setTimeout(() => {
         ws?.send(Message.FILE_CHANGE);
-      }
-
-      if (log) chalkLogger.green('Extension Reloaded...');
+        if (log) chalkLogger.green('Extension Reloaded...');
+      }, 500);
     }
   };
 };
