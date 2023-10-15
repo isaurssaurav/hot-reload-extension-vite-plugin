@@ -10,6 +10,9 @@ export type hotReloadExtensionOptions = {
   log?: boolean;
 };
 
+let IS_TRANSFORMED = false;
+let IS_BUFFERING = false;
+
 const hotReloadExtension = (options: hotReloadExtensionOptions): Plugin => {
   const { log, backgroundPath } = options;
   let ws: WebSocket | null = null;
@@ -26,19 +29,20 @@ const hotReloadExtension = (options: hotReloadExtensionOptions): Plugin => {
   return {
     name: PLUGIN_NAME,
     async transform(code: string, id: string) {
-      if (!isDev) {
+      if (!isDev || IS_TRANSFORMED) {
         return;
       }
 
       if (id.includes(backgroundPath)) {
-        const buffer = fs.readFileSync(resolve(__dirname, 'scripts/background-reload.js'));
+        IS_TRANSFORMED = true;
 
+        const buffer = fs.readFileSync(resolve(__dirname, 'scripts/background-reload.js'));
         return {
           code: code + buffer.toString()
         };
       }
     },
-    closeBundle() {
+    async closeBundle() {
       if (!isDev) {
         return;
       }
@@ -48,8 +52,20 @@ const hotReloadExtension = (options: hotReloadExtensionOptions): Plugin => {
         return;
       }
 
+      await new Promise((res) => {
+        setTimeout(() => {
+          IS_BUFFERING = true;
+          res(1);
+        }, 500);
+      });
+
+      IS_BUFFERING = false;
+
+      if (!IS_BUFFERING) {
+        ws?.send(Message.FILE_CHANGE);
+      }
+
       if (log) chalkLogger.green('Extension Reloaded...');
-      ws?.send(Message.FILE_CHANGE);
     }
   };
 };

@@ -15,6 +15,7 @@
   },
   "scripts": {
     "build": "tsup",
+    "build:watch": "tsup --watch",
     "lint:check": "prettier . --check",
     "lint:fix": "prettier . --write",
     "semantic-release": "semantic-release"
