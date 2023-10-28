@@ -8,9 +8,7 @@
 
 Inspired by [stackoverflow answer](https://stackoverflow.com/a/65485938/7135342) and other similar repos.
 
-
 https://github.com/isaurssaurav/hot-reload-extension-vite-plugin/assets/13806915/06228a73-4ae4-404f-8bee-717b0cae6eef
-
 
 ## Usage
 
