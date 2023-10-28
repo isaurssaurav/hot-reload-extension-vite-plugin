@@ -50,9 +50,11 @@ const hotReloadExtension = (options: hotReloadExtensionOptions): Plugin => {
         chalkLogger.red('Load extension to browser...');
         return;
       }
-      // TODO BUG: when user triggers watch before previous build is completed, the extension crashes
-      ws?.send(Message.FILE_CHANGE);
-      if (log) chalkLogger.green('Extension Reloaded...');
+
+      setTimeout(() => {
+        ws?.send(Message.FILE_CHANGE);
+        if (log) chalkLogger.green('Extension Reloaded...');
+      }, 1000);
     }
   };
 };
