@@ -10,8 +10,6 @@ export type hotReloadExtensionOptions = {
   log?: boolean;
 };
 
-let IS_TRANSFORMED = false;
-
 const hotReloadExtension = (options: hotReloadExtensionOptions): Plugin => {
   const { log, backgroundPath } = options;
   let ws: WebSocket | null = null;
@@ -28,13 +26,11 @@ const hotReloadExtension = (options: hotReloadExtensionOptions): Plugin => {
   return {
     name: PLUGIN_NAME,
     async transform(code: string, id: string) {
-      if (!isDev || IS_TRANSFORMED) {
+      if (!isDev) {
         return;
       }
 
       if (id.includes(backgroundPath)) {
-        IS_TRANSFORMED = true;
-
         const buffer = fs.readFileSync(resolve(__dirname, 'scripts/background-reload.js'));
         return {
           code: code + buffer.toString()
@@ -50,7 +46,6 @@ const hotReloadExtension = (options: hotReloadExtensionOptions): Plugin => {
         chalkLogger.red('Load extension to browser...');
         return;
       }
-
       setTimeout(() => {
         ws?.send(Message.FILE_CHANGE);
         if (log) chalkLogger.green('Extension Reloaded...');
