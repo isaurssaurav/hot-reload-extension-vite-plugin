@@ -51,10 +51,10 @@ const hotReloadExtension = (options: hotReloadExtensionOptions): Plugin => {
         return;
       }
 
-      setTimeout(()=>{
+      setTimeout(() => {
         ws?.send(Message.FILE_CHANGE);
         if (log) chalkLogger.green('Extension Reloaded...');
-      }, 1000)
+      }, 1000);
     }
   };
 };
