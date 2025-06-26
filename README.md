@@ -41,6 +41,8 @@ $ NODE_ENV=development vite build --watch  // Override NODE_ENV
 
 > Extension will only reload when NODE_ENV is 'development'
 
+> Background script is required. Set the path in `backgroundPath` and in the `build.roolupOptions.input` (vite config). Also include the path in `background.service_worker` in `manifest.json`.
+
 ## Example Project
 
 [Link](https://github.com/isaurssaurav/hot-reload-extension-vite/tree/main/example)
