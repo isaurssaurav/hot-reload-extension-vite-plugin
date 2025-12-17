@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "nodenext",
     "strict": true,
     "declaration": true,
     "noUnusedLocals": true,
     "esModuleInterop": true,
     "outDir": "dist",
-    "module": "commonjs",
+    "module": "nodenext",
     "lib": ["ESNext", "DOM"],
     "types": ["node", "chrome"],
     "sourceMap": false,

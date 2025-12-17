@@ -3,14 +3,15 @@
   "version": "0.0.0-development",
   "description": "Simple vite plugin to reload the chrome extension.",
   "main": "dist/main.js",
+  "type": "module",
   "files": [
     "dist"
   ],
   "exports": {
     ".": {
       "types": "./dist/main.d.ts",
-      "require": "./dist/main.js",
-      "import": "./dist/main.mjs"
+      "require": "./dist/main.cjs",
+      "import": "./dist/main.js"
     }
   },
   "scripts": {
@@ -29,22 +30,24 @@
   "author": "Saurav Maharjan",
   "license": "MIT",
   "devDependencies": {
-    "@types/chrome": "^0.0.246",
-    "@types/node": "^20.6.4",
-    "@types/ws": "^8.5.5",
-    "chalk": "^5.3.0",
-    "npm": "^10.1.0",
-    "prettier": "^3.0.3",
-    "tsup": "^7.2.0",
-    "typescript": "^5.2.2",
-    "vite": "^4.4.9",
-    "semantic-release": "^22.0.4"
+    "@types/chrome": "^0.1.32",
+    "@types/node": "^25.0.3",
+    "@types/ws": "^8.18.1",
+    "chalk": "^5.6.2",
+    "npm": "^11.7.0",
+    "prettier": "^3.7.4",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.0",
+    "semantic-release": "^25.0.2"
   },
   "dependencies": {
-    "ws": "^8.14.2"
+    "ws": "^8.18.3"
   },
   "release": {
-    "branches": ["main"]
+    "branches": [
+      "main"
+    ]
   },
   "repository": {
     "type": "git",
