@@ -49,10 +49,6 @@
       "main"
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/isaurssaurav/hot-reload-extension-vite.git"
-  },
   "volta": {
     "node": "24.12.0"
   }
