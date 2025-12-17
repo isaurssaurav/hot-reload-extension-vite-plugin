@@ -31,6 +31,27 @@ export default {
 };
 ```
 
+> Starting from `v1.2.0`, you can enable Side Panel hot reload support by passing the `sidePanel` option to the plugin.
+
+Checkout [example project](https://github.com/isaurssaurav/hot-reload-extension-vite/tree/main/example) for a complete implementation..
+
+```js
+import hotReloadExtension from 'hot-reload-extension-vite';
+
+export default {
+  plugins: [
+    hotReloadExtension({
+      log: true,
+      backgroundPath: 'path/to/background.ts',
+      sidePanel: {
+        scriptPath: 'path/to/sidePanel.ts',
+        htmlPath: 'path/to/sidePanel.html'
+      }
+    })
+  ]
+};
+```
+
 Then run
 
 ```bash
@@ -45,10 +66,18 @@ $ NODE_ENV=development vite build --watch  // Override NODE_ENV
 
 ## Options
 
-| Options        | Type               | Description                             |
-| -------------- | ------------------ | --------------------------------------- |
-| log            | boolean (optional) | Logs error and info.                    |
-| backgroundPath | string (required)  | Path to background service worker file. |
+| Options        | Type                        | Description                             |
+| -------------- | --------------------------- | --------------------------------------- |
+| backgroundPath | string (required)           | Path to background service worker file. |
+| log            | boolean (optional)          | Logs error and info.                    |
+| sidePanel      | SidePanelOptions (Optional) | Path to sidePanel script and html file. |
+
+```ts
+type SidePanelOptions = {
+  path: string;
+  htmlPath: string;
+};
+```
 
 ## Env variables
 

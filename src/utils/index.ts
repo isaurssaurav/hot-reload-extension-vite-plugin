@@ -1,7 +1,9 @@
 import chalk from 'chalk';
 
 export enum Message {
-  FILE_CHANGE = 'file-change'
+  FILE_CHANGE = 'file-change',
+  // Same message used for socket and extension.
+  FILE_CHANGE_SIDE_PANEL = 'file-change-side-panel'
 }
 
 export const isDev = process.env.NODE_ENV === 'development';
