@@ -2,8 +2,8 @@ import type { Plugin } from 'vite';
 import { resolve } from 'path';
 import WebSocket from 'ws';
 import fs from 'fs';
-import { initAndListenConnection } from './utils/websocket';
-import { Message, PLUGIN_NAME, chalkLogger, isDev } from './utils';
+import { initAndListenConnection } from './utils/websocket.js';
+import { Message, PLUGIN_NAME, chalkLogger, isDev } from './utils/index.js';
 
 export type hotReloadExtensionOptions = {
   backgroundPath: string;
