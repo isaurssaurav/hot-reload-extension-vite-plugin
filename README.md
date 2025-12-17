@@ -31,9 +31,9 @@ export default {
 };
 ```
 
-> Starting from `v1.2.0`, you can enable Side Panel hot reload support by passing the `sidePanel` option to the plugin.
+> Starting from `v1.0.14`, you can enable Side Panel hot reload support by passing the `sidePanel` option to the plugin.
 
-Checkout [example project](https://github.com/isaurssaurav/hot-reload-extension-vite/tree/main/example) for a complete implementation..
+Checkout [example project](https://github.com/isaurssaurav/hot-reload-extension-vite/tree/main/example) for a complete implementation.
 
 ```js
 import hotReloadExtension from 'hot-reload-extension-vite';
@@ -45,7 +45,7 @@ export default {
       backgroundPath: 'path/to/background.ts',
       sidePanel: {
         scriptPath: 'path/to/sidePanel.ts',
-        htmlPath: 'path/to/sidePanel.html'
+        htmlPath: 'path/to/sidePanel.html' // Optional
       }
     })
   ]
