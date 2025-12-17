@@ -1,4 +1,4 @@
-import { HOT_RELOAD_EXTENSION_VITE_PORT, Message } from '../utils';
+import { HOT_RELOAD_EXTENSION_VITE_PORT, Message } from '../utils/index.js';
 /**
  * If development, this code will be appended to background script file.
  */

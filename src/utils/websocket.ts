@@ -1,5 +1,5 @@
 import { WebSocket, WebSocketServer } from 'ws';
-import { HOT_RELOAD_EXTENSION_VITE_PORT } from '.';
+import { HOT_RELOAD_EXTENSION_VITE_PORT } from './index.js';
 
 export function initAndListenConnection(cb: (websocket: WebSocket) => void) {
   const wss = new WebSocketServer({ port: HOT_RELOAD_EXTENSION_VITE_PORT });
