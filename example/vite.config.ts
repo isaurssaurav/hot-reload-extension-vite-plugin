@@ -28,7 +28,8 @@ export default defineConfig((test) => {
           content: resolve(__dirname, 'src/pages/content/index.ts'),
           background: resolve(__dirname, 'src/pages/background/index.ts'),
           'dev-tools': resolve(__dirname, 'src/pages/dev-tools/index.html'),
-          panel: resolve(__dirname, 'src/pages/panel/index.html')
+          panel: resolve(__dirname, 'src/pages/panel/index.html'),
+          sidePanel: resolve(__dirname, 'src/pages/sidePanel/index.html'),
         },
         output: {
           dir: 'dist',

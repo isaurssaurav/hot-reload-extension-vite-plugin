@@ -8,11 +8,15 @@
     "default_icon": "hello_extensions.png"
   },
   "devtools_page": "src/pages/dev-tools/index.html",
+  "side_panel": {
+    "default_path": "src/pages/sidePanel/index.html"
+  },
   "content_scripts": [
     {
       "js": ["src/pages/content/index.js"],
       "matches": ["<all_urls>"]
     }
   ],
-  "background": { "service_worker": "src/pages/background/index.js" }
+  "background": { "service_worker": "src/pages/background/index.js" },
+  "permissions": ["sidePanel", "contextMenus", "storage"]
 }
