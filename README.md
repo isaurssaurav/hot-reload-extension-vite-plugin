@@ -87,6 +87,15 @@ type SidePanelOptions = {
 | -------------------------------- | ------- | --------------- |
 | `HOT_RELOAD_EXTENSION_VITE_PORT` | 8080    | Web socket port |
 
+## Contributors
+
+<a href="https://github.com/isaurssaurav/hot-reload-extension-vite-plugin/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=isaurssaurav/hot-reload-extension-vite-plugin" />
+</a>
+<a href="https://github.com/GregoryBai">
+  <img src="https://avatars.githubusercontent.com/u/60780439?s=60&v=4">
+</a>
+
 ## License
 
 MIT
