@@ -44,7 +44,7 @@ export default {
       log: true,
       backgroundPath: 'path/to/background.ts',
       sidePanel: {
-        scriptPath: 'path/to/sidePanel.ts',
+        path: 'path/to/sidePanel.ts',
         htmlPath: 'path/to/sidePanel.html' // Optional
       }
     })
