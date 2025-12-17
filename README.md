@@ -31,9 +31,9 @@ export default {
 };
 ```
 
-#### Side Panel Configuration (v1.0.14+)
+#### Side Panel Configuration (v1.1.0+)
 
-Starting from `v1.0.14`, you can enable Side Panel hot reload support by passing the `sidePanel` option to the plugin.
+Starting from `v1.1.0`, you can enable Side Panel hot reload support by passing the `sidePanel` option to the plugin.
 
 ```js
 import hotReloadExtension from 'hot-reload-extension-vite';
