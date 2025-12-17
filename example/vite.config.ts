@@ -10,7 +10,11 @@ export default defineConfig((test) => {
       vue(),
       hotReloadExtension({
         log: true,
-        backgroundPath: 'src/pages/background/index.ts'
+        backgroundPath: 'src/pages/background/index.ts',
+        sidePanel: {
+          path: 'src/pages/sidePanel/index.ts',
+          htmlPath: 'src/pages/sidePanel/index.html'
+        }
       }),
       viteStaticCopy({
         targets: [
@@ -29,7 +33,7 @@ export default defineConfig((test) => {
           background: resolve(__dirname, 'src/pages/background/index.ts'),
           'dev-tools': resolve(__dirname, 'src/pages/dev-tools/index.html'),
           panel: resolve(__dirname, 'src/pages/panel/index.html'),
-          sidePanel: resolve(__dirname, 'src/pages/sidePanel/index.html'),
+          sidePanel: resolve(__dirname, 'src/pages/sidePanel/index.html')
         },
         output: {
           dir: 'dist',

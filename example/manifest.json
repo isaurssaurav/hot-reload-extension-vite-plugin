@@ -18,5 +18,5 @@
     }
   ],
   "background": { "service_worker": "src/pages/background/index.js" },
-  "permissions": ["sidePanel", "contextMenus", "storage"]
+  "permissions": ["sidePanel", "contextMenus"]
 }

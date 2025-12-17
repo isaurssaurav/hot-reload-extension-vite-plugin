@@ -1,15 +1,3 @@
-function setupContextMenu() {
-  chrome.contextMenus.create({
-    id: 'define-word',
-    title: 'Define',
-    contexts: ['selection']
-  });
-}
+console.log('Background');
 
-chrome.runtime.onInstalled.addListener(() => {
-  setupContextMenu();
-});
-
-chrome.contextMenus.onClicked.addListener((tab) => {
-  chrome.sidePanel.open({ tabId: tab?.id });
-});
+chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true }).catch((error) => console.error(error));

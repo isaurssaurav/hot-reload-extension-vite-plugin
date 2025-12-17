@@ -1,6 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="30d15f9f-3273-4114-a114-857f7b82678b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/example/src/pages/sidePanel/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/src/pages/sidePanel/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/example/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/src/pages/background/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/example/src/pages/background/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/src/pages/content/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/example/src/pages/content/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/src/pages/panel/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/example/src/pages/panel/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/src/pages/popup/popup.vue" beforeDir="false" afterPath="$PROJECT_DIR$/example/src/pages/popup/popup.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/example/vite.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/background-reload.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/background-reload.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/sidepanel-reload.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/sidepanel-reload.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/websocket.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/websocket.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="46" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/example/package.json" />
+    <dismissed value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="36yGlCzQg5QquTdYXhktA5Mvzr3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "sidepanel__hmr",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/Users/sauravmaharjan/Documents/personal/hot-reload-extension-vite-plugin",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/Users/sauravmaharjan/Documents/personal/hot-reload-extension-vite-plugin/node_modules/prettier",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "/Users/sauravmaharjan/Documents/personal/hot-reload-extension-vite-plugin/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-c7e53b3be11b-JavaScript-PS-253.28294.345" />
+        <option value="bundled-php-predefined-a98d8de5180a-09080813851e-com.jetbrains.php.sharedIndexes-PS-253.28294.345" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="30d15f9f-3273-4114-a114-857f7b82678b" name="Changes" comment="" />
+      <created>1765971546981</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1765971546981</updated>
+      <workItem from="1765971548325" duration="165000" />
+      <workItem from="1765971716035" duration="5724000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>

@@ -19,4 +19,10 @@ socket.addEventListener('message', (event) => {
   if (event.data === Message.FILE_CHANGE) {
     chrome.runtime.reload();
   }
+
+  if (event.data === Message.FILE_CHANGE_SIDE_PANEL) {
+    chrome.runtime.sendMessage({
+      type: Message.FILE_CHANGE_SIDE_PANEL
+    });
+  }
 });
