@@ -11,6 +11,7 @@ const openSidePanel = async () => {
 </script>
 
 <template>
+  <!-- Update here to see changes -->
   <HelloWorld msg="Vite + Vue" />
   <button type="button" @click="openSidePanel">Open Side Panel</button>
 </template>
