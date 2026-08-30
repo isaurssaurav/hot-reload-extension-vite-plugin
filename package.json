@@ -2,21 +2,21 @@
   "name": "hot-reload-extension-vite",
   "version": "0.0.0-development",
   "description": "Simple vite plugin to reload the chrome extension.",
-  "main": "dist/main.js",
+  "main": "dist/main.mjs",
   "type": "module",
   "files": [
     "dist"
   ],
   "exports": {
     ".": {
-      "types": "./dist/main.d.ts",
+      "types": "./dist/main.d.mts",
       "require": "./dist/main.cjs",
-      "import": "./dist/main.js"
+      "import": "./dist/main.mjs"
     }
   },
   "scripts": {
-    "build": "tsup",
-    "build:watch": "tsup --watch",
+    "build": "tsdown",
+    "build:watch": "tsdown --watch",
     "lint:check": "prettier . --check",
     "lint:fix": "prettier . --write",
     "semantic-release": "semantic-release"
@@ -30,19 +30,19 @@
   "author": "Saurav Maharjan",
   "license": "MIT",
   "devDependencies": {
-    "@types/chrome": "^0.1.32",
-    "@types/node": "^25.0.3",
+    "@types/chrome": "^0.2.7",
+    "@types/node": "^26.4.0",
     "@types/ws": "^8.18.1",
-    "chalk": "^5.6.2",
-    "npm": "^11.7.0",
-    "prettier": "^3.7.4",
-    "tsup": "^8.5.1",
-    "typescript": "^5.9.3",
-    "vite": "^7.3.0",
-    "semantic-release": "^25.0.2"
+    "chalk": "^6.0.0",
+    "npm": "^12.0.2",
+    "prettier": "^3.9.6",
+    "semantic-release": "^25.0.9",
+    "tsdown": "^0.22.14",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.2"
   },
   "dependencies": {
-    "ws": "^8.18.3"
+    "ws": "^8.21.3"
   },
   "release": {
     "branches": [

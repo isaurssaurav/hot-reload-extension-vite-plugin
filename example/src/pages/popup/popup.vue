@@ -1,9 +1,18 @@
 <script setup lang="ts">
 import HelloWorld from '../../components/HelloWorld.vue';
+
+const openSidePanel = async () => {
+  const currentWindow = await chrome.windows.getCurrent();
+  if (currentWindow.id !== undefined) {
+    await chrome.sidePanel.open({ windowId: currentWindow.id });
+  }
+  window.close();
+};
 </script>
 
 <template>
   <HelloWorld msg="Vite + Vue" />
+  <button type="button" @click="openSidePanel">Open Side Panel</button>
 </template>
 
 <style scoped>

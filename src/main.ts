@@ -49,14 +49,14 @@ const hotReloadExtension = (options: hotReloadExtensionOptions): Plugin => {
       }
 
       if (backgroundPath && id.includes(backgroundPath)) {
-        const buffer = fs.readFileSync(resolve(__dirname, 'scripts/background-reload.js'));
+        const buffer = fs.readFileSync(resolve(import.meta.dirname, 'scripts/background-reload.js'));
         return {
           code: code + buffer.toString()
         };
       }
 
       if (sidePanel?.path && id.includes(sidePanel.path)) {
-        const buffer = fs.readFileSync(resolve(__dirname, 'scripts/sidepanel-reload.js'));
+        const buffer = fs.readFileSync(resolve(import.meta.dirname, 'scripts/sidepanel-reload.js'));
         return {
           code: code + buffer.toString()
         };
